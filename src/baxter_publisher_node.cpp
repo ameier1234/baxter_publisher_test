@@ -1,4 +1,4 @@
-l#include "ros/ros.h"
+#include "ros/ros.h"
 #include "baxter_core_msgs/JointCommand.h"
 
 int main(int argc, char** argv)
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
   ros::Rate loop_rate(10);
   while(ros::ok())
     {
-      cmd.command[0] += 1;
+      cmd.command[3] += 0.5;
       pub.publish(cmd);
 
 
